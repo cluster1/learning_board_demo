@@ -277,26 +277,7 @@ void display_OLED(void) {
   
 }
 
-void beep(void){
-  digitalWrite(pin_buzzer, HIGH);
-  delay(50);
-  digitalWrite(pin_buzzer, LOW);  
-}
 
-void beep_long(void){
-  digitalWrite(pin_buzzer, HIGH);
-  delay(50);
-  digitalWrite(pin_buzzer, LOW);  
-  delay(25);
-  digitalWrite(pin_buzzer, HIGH);
-  delay(50);
-  digitalWrite(pin_buzzer, LOW);  
-  delay(25);
-  digitalWrite(pin_buzzer, HIGH);
-  delay(50);
-  digitalWrite(pin_buzzer, LOW);  
-
-}
 
 void display_BEEP(void){
   display.clearDisplay();  
@@ -306,9 +287,9 @@ void display_BEEP(void){
   display.setCursor(0,10);
  
   display.display();    // for the changes to make effect 
-  beep(); 
+  beep_pasive(); 
   delay(1000) ;
-  beep_long();                 
+  buzz_pasive();                 
   delay(2000);
 }
 

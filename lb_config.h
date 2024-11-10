@@ -171,3 +171,43 @@ const unsigned char* bitmap_icons[6] = {
   bitmap_icon_3dcube,
   bitmap_icon_dashboard
 };
+
+void buzz_pasive(void){
+  tone(pin_buzzer, 440); // A4
+  delay(200);
+  tone(pin_buzzer, 494); // B4
+  delay(200);
+  tone(pin_buzzer, 523); // C4
+  delay(200);
+  tone(pin_buzzer, 587); // D4
+  delay(100);
+  noTone(pin_buzzer);
+}
+void beep_pasive(void){
+  tone(pin_buzzer, 784); // G4
+  delay(50);
+  tone(pin_buzzer, 698); // F4
+  delay(50);
+  noTone(pin_buzzer);
+}
+void buzz_active(void){
+  digitalWrite(pin_buzzer, HIGH);
+  delay(50);
+  digitalWrite(pin_buzzer, LOW);  
+  delay(25);
+  digitalWrite(pin_buzzer, HIGH);
+  delay(50);
+  digitalWrite(pin_buzzer, LOW);  
+  delay(25);
+  digitalWrite(pin_buzzer, HIGH);
+  delay(50);
+  digitalWrite(pin_buzzer, LOW);  
+}
+void beep_active(void){
+  digitalWrite(pin_buzzer, HIGH);
+  delay(50);
+  digitalWrite(pin_buzzer, LOW);  
+  noTone(pin_buzzer);
+  
+}
+ 
